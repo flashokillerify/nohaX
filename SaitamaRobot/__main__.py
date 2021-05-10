@@ -209,8 +209,8 @@ def start(update: Update, context: CallbackContext):
                              text="🚑 Support Group",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
-                             text="🔔 Updates Channel",
-                             url="https://t.me/taken")
+                             text="🔔 owner ",
+                             url="https://t.me/flashokiller_gacha")
                      ],
                      [
                          InlineKeyboardButton(
