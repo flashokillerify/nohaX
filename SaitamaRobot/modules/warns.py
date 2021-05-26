@@ -27,7 +27,7 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.utils.helpers import mention_html
 
 WARN_HANDLER_GROUP = 9
-CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
+CURRENT_WARNING_FILTER_STRING = "<b>haha this is current warnfilters In this group 🤓:</b>\n"
 
 
 # Not async
@@ -37,12 +37,12 @@ def warn(user: User,
          message: Message,
          warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-        # message.reply_text("Damn admins, They are too far to be One Punched!")
+        # message.reply_text("Damn admins, They are too far to be warn u!")
         return
 
     if user.id in TIGERS:
         if warner:
-            message.reply_text("Tigers cant be warned.")
+            message.reply_text("Tigers(बाघ) cant be warned.")
         else:
             message.reply_text(
                 "Tiger triggered an auto warn filter!\n I can't warn tigers but they should avoid abusing this."
@@ -54,7 +54,7 @@ def warn(user: User,
             message.reply_text("Wolf disasters are warn immune.")
         else:
             message.reply_text(
-                "Wolf Disaster triggered an auto warn filter!\nI can't warn wolves but they should avoid abusing this."
+                "Wolf Disaster triggered an auto  warn filter get me a shelter!\nI can't warn wolves but they should avoid abusing this."
             )
         return
 
