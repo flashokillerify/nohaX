@@ -2,6 +2,7 @@ RUN_STRINGS = (
     "Now you see me, now you don't."
     "ε=ε=ε=ε=┌(;￣▽￣)┘",
     "Get back here!",
+    "U DUCK RUN WITH A GAY GET life by @flashokiller_gacha",
     "REEEEEEEEEEEEEEEEEE!!!!!!!",
     "Look out for the wall!",
     "Don't leave me alone with them!!",
@@ -31,14 +32,14 @@ SLAP_SAITAMA_TEMPLATES = (
     "Stop slapping me. REEEEEEEEEEEEEE.",
     [
         "I am muting you for a minute.",  # normal reply
-        "Stop slapping me just because I can't mute you. REEEEEEEEEE.",  # reply to admin
+        "Stop slapping me just because I can kick you. REEEEEEEEEE.",  # reply to admin
         "tmute",  # command
         "Shut up!",
         "Silence!"
     ])
 
 SLAP_TEMPLATES = (
-    "{user2} was killed by magic.",
+    "{user2} was killed by noha with loves.",
     "{user2} starved without pats.",
     "{user2} was knocked into the void by {user1}.",
     "{user2} fainted.",
@@ -47,7 +48,7 @@ SLAP_TEMPLATES = (
     "{user2} got rekt.",
     "{user2}'s melon was split by {user1}.",
     "{user2} was sliced and diced by {user1}.",
-    "{user2} played hot-potato with a grenade.",
+    "{user2} played very-hot-potato with a grenade.",
     "{user2} was knifed by {user1}.",
     "{user2} ate a grenade.",
     "{user2} is what's for dinner!",
@@ -95,7 +96,7 @@ SLAP_TEMPLATES = (
     "Hey Everybody! {user1} is asking me to be mean!",
     "( ･_･)ﾉ⌒●~* (･.･;) <-{user2}",
     "Take this {user2}\n(ﾉﾟДﾟ)ﾉ ))))●~* ",
-    "Here {user2} hold this\n(｀・ω・)つ ●~＊",
+    "Here {user2} hold this\n(｀・ω・)つ ~＊",
     "( ・_・)ノΞ●~*  {user2}\nDieeeee!!.",
     "( ・∀・)ｒ鹵~<≪巛;ﾟДﾟ)ﾉ\n*Bug sprays {user2}*.",
     "( ﾟДﾟ)ﾉ占~<巛巛巛.\n-{user2} You pest!",
@@ -179,7 +180,7 @@ PAT_TEMPLATES = (
     "(ｏ・_・)ノ”(ᴗ_ ᴗ。)",
     "(*￣▽￣)ノ”(- -*)",
     "(っ´ω`)ﾉ(╥ω╥)",
-    "( ´Д｀)ﾉ(´･ω･`) ﾅﾃﾞﾅﾃﾞ",
+    "¯\_ಠ_ಠ_/¯¯\_ಠ_ಠ_/¯¯\_ಠ_ಠ_/¯¯\_ಠ_ಠ_/¯",
 )
 
 PAT_GIFS = (
@@ -191,7 +192,7 @@ PAT_STICKERS = (
     "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ")
 
 PING_STRING = (
-    "PONG!!",
+    "PONG!!🎃",
     "I am here!",
 )
 
@@ -218,7 +219,7 @@ ITEMS = (
     "chunchunmaru",
     "Kubikiribōchō",
     "rasengan",
-    "spherical flying kat",
+    "spherical flying human",
 )
 
 THROW = (
@@ -237,7 +238,7 @@ HIT = (
     "pats",
 )
 
-EYES = [['⌐■', '■'], [' ͠°', ' °'], ['⇀', '↼'], ['´• ', ' •`'], ['´', '`'],
+EYES = [['⌐-', '■'], [' ͠°', ' °'], ['⇀', '↼'], ['´• ', ' •`'], ['´', '`'],
         ['`', '´'], ['ó', 'ò'], ['ò', 'ó'], ['⸌', '⸍'], ['>',
                                                          '<'], ['Ƹ̵̡', 'Ʒ'],
         ['ᗒ', 'ᗕ'], ['⟃', '⟄'], ['⪧', '⪦'], ['⪦', '⪧'], ['⪩', '⪨'], ['⪨', '⪩'],
@@ -265,19 +266,19 @@ EARS = [['q', 'p'], ['ʢ', 'ʡ'], ['⸮', '?'], ['ʕ', 'ʔ'], ['ᖗ', 'ᖘ'], ['
         ['\\(', ')/'], ['乁(', ')ㄏ'], ['└[', ']┘'], ['(づ', ')づ'], ['(ง', ')ง'],
         ['⎝', '⎠'], ['ლ(', 'ლ)'], ['ᕕ(', ')ᕗ'], ['(∩', ')⊃━☆ﾟ.*']]
 
-TOSS = ("Heads", "Tails")
+TOSS = ("Heads", "Tails", "between hit on you")
 
 EIGHTBALL = [
-    "🟢 As I see it, yes.", "🟡 Ask again later.", "🟡 Better not tell you now.",
-    "🟡 Cannot predict now.", "🟡 Concentrate and ask again.",
-    "🟡 Don’t count on it.", "🟢 It is certain.", "🟢 It is decidedly so.",
-    "🟢 Most likely.", "🔴 My reply is no.", "🔴 My sources say no.",
-    "🔴 Outlook not so good.", "🟢 Outlook good.", "🟡 Reply hazy, try again.",
-    "🟢 Signs point to yes.", "🔴 Very doubtful.", "🟢 Without a doubt.", "🟢 Yes.",
-    "🟢 Yes – definitely.", "🟢 You may rely on it."
+    "🌕 As I see it, yes.", "🌓 Ask again later.", "🌒 Better not tell you now.",
+    "🥸 Cannot predict now.", "🌘 Concentrate and ask again.",
+    "🌕 Don’t count on it.", "🟢 It is certain.", "🟢 It is decidedly so.",
+    "😑 Most likely.", "🔴 My reply is no.", "🔴 My sources say no.",
+    "🥲 Outlook not so good.", "🟢 Outlook good.", "🟡 Reply hazy, try again.",
+    "🥲 Signs point to yes.", "🔴 Very doubtful.", "🟢 Without a doubt.", "🟢 Yes.",
+    "☹️ Yes – definitely.", "🟢 You may blame my owner."
 ]
 
-DECIDE = ("Yes.", "No.", "Maybe.")
+DECIDE = ("Yes.", "No.", "Maybe.", "What about yesseee andd no.")
 
-TABLE = ("(╯°□°）╯彡 ┻━┻", "I ran out of tables, will order more.",
-         "Go do some work instead of flippin tables.")
+TABLE = ("(ﾉ≧∇≦)ﾉ ﾐ ┻━┻", "I ran out of tables, will order more.",
+         "Go do some homework instead of flippin tables.")
