@@ -33,7 +33,7 @@ SLAP_SAITAMA_TEMPLATES = (
     [
         "I am muting you for a minute.",  # normal reply
         "Stop slapping me just because I can kick you. REEEEEEEEEE.",  # reply to admin
-        "tmute",  # command
+        "ban",  # command
         "Shut up!",
         "Silence!"
     ])
