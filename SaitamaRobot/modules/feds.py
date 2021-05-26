@@ -79,11 +79,11 @@ def new_fed(update: Update, context: CallbackContext):
         x = sql.new_fed(user.id, fed_name, fed_id)
         if not x:
             update.effective_message.reply_text(
-                "Can't federate! Please contact @OnePunchSupport if the problem persist."
+                "Can't federate! Please contact @noha_bot_support if the problem persist."
             )
             return
 
-        update.effective_message.reply_text("*You have succeeded in creating a new federation!*"\
+        update.effective_message.reply_text("*You have succeeded in creating a new federation!NOW ENJOY 🤓*"\
                  "\nName: `{}`"\
                  "\nID: `{}`"
                  "\n\nUse the command below to join the federation:"
@@ -133,13 +133,13 @@ def del_fed(update: Update, context: CallbackContext):
         return
 
     update.effective_message.reply_text(
-        "You sure you want to delete your federation? This cannot be reverted, you will lose your entire ban list, and '{}' will be permanently lost."
+        "☹️You sure you want to DLE your federation? This cannot be reverted, you will lose your entire ban list, and '{}' will be permanently lost ☹️."
         .format(getinfo['fname']),
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                text="⚠️ Delete Federation ⚠️",
+                text="🥸 Delete Federation 🥸",
                 callback_data="rmfed_{}".format(fed_id))
-        ], [InlineKeyboardButton(text="Cancel",
+        ], [InlineKeyboardButton(text="NOOOOOOOOOOO??????☹️",
                                  callback_data="rmfed_cancel")]]))
 
 
@@ -162,7 +162,7 @@ def rename_fed(update, context):
         sql.rename_fed(fed_id, user.id, newname)
         msg.reply_text(f"Successfully renamed your fed name to {newname}!")
     else:
-        msg.reply_text("Only federation owner can do this!")
+        msg.reply_text("Only federation owner can do this hahaha !")
 
 
 @run_async
@@ -175,7 +175,7 @@ def fed_chat(update: Update, context: CallbackContext):
     user_id = update.effective_message.from_user.id
     if not is_user_admin(update.effective_chat, user_id):
         update.effective_message.reply_text(
-            "You must be an admin to execute this command")
+            "You must be an admeme to execute this command")
         return
 
     if not fed_id:
@@ -221,7 +221,7 @@ def join_fed(update: Update, context: CallbackContext):
                         "Only group creators can use this command!")
                     return
     if fed_id:
-        message.reply_text("You cannot join two federations from one chat")
+        message.reply_text("You cannot join 69 federations only 1 for one chat")
         return
 
     if len(args) >= 1:
@@ -246,7 +246,7 @@ def join_fed(update: Update, context: CallbackContext):
                         chat.title, getfed['fname']),
                     parse_mode="markdown")
 
-        message.reply_text("This group has joined the federation: {}!".format(
+        message.reply_text("This group has not joined the federation: {}!".format(
             getfed['fname']))
 
 
@@ -258,7 +258,7 @@ def leave_fed(update: Update, context: CallbackContext):
 
     if chat.type == 'private':
         send_message(update.effective_message,
-                     "This command is specific to the group, not to our PM!")
+                     "This command is specific to the group, not to our PM do in your group!")
         return
 
     fed_id = sql.get_fed_id(chat.id)
@@ -433,7 +433,7 @@ def fed_info(update: Update, context: CallbackContext):
     chat = update.effective_chat
     info = sql.get_fed_info(fed_id)
 
-    text = "<b>ℹ️ Federation Information:</b>"
+    text = "<b>😑 Federation Information:</b>"
     text += "\nFedID: <code>{}</code>".format(fed_id)
     text += "\nName: {}".format(info['fname'])
     text += "\nCreator: {}".format(mention_html(owner.id, owner_name))
@@ -475,7 +475,7 @@ def fed_admin(update: Update, context: CallbackContext):
     info = sql.get_fed_info(fed_id)
 
     text = "<b>Federation Admin {}:</b>\n\n".format(info['fname'])
-    text += "👑 Owner:\n"
+    text += "🙄 Owner:\n"
     owner = bot.get_chat(info['owner'])
     try:
         owner_name = owner.first_name + " " + owner.last_name
@@ -485,9 +485,9 @@ def fed_admin(update: Update, context: CallbackContext):
 
     members = sql.all_fed_members(fed_id)
     if len(members) == 0:
-        text += "\n🔱 There are no admins in this federation"
+        text += "\n☹️ There are no admins in this federation"
     else:
-        text += "\n🔱 Admin:\n"
+        text += "\n☹️ Admin:\n"
         for x in members:
             user = bot.get_chat(x)
             text += " • {}\n".format(mention_html(user.id, user.first_name))
