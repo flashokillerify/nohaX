@@ -2,8 +2,7 @@
 # NoHa
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats. 
-<details>
-  <summary>SEE THIS !! </summary>
+
 Can be found on telegram as [Noha](https://t.me/Noha2_bot).
 
 The Support group can be reached out to at [One Punch Support](https://t.me/OnePunchSupport), where you can ask for help about [SUPPORT](https://t.me/noha_bot_support), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
@@ -180,3 +179,8 @@ Also, missing proper credit for blacklistusers taken from TheRealPhoenixBot (wil
 Any other authorship/credits can be seen through the commits.
 
 Should any be missing kindly let us know at [One Punch Support](https://t.me/OnePunchSupport) or simply submit a pull request on the readme.
+
+
+<details>
+  <summary>SEE THIS !! </summary>
+Pls don't spam my dm or may get gban 😪
