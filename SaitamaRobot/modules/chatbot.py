@@ -2,7 +2,7 @@ import aiohttp
 import asyncio
 import urllib.parse
 message = "Hello!"
-key = "3IsbC1YfLbx718"
+key = "3IsbC1YfLbx7"
 header = {"x-api-key": key}
 type = "stable"
 params = {'type':type , 'message':message}
