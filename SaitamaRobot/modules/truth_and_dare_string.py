@@ -69,5 +69,6 @@ DARE = (
     "Declare who is your true love.",
     "Send a screenshot of your gallery.",
     "Set your crush’s picture as your dp.",
-    "Suggest me more dares.",
+    "Go to your House basement and touch the last wall at 3:00 am.",
+    "Suggest me more dares more.",
 )
