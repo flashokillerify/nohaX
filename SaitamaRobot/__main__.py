@@ -543,7 +543,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am available in fish market")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am online 🥴🥴🥴")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
