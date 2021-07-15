@@ -1,11 +1,11 @@
-![NohA](https://telegra.ph//file/fa99522543de9072b0a70.jpg)
+![RaJni](https://telegra.ph/file/d103a97c1df5ac087c88f.jpg)
 # NoHa
 
-A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats. 
+A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed personal to make Saitama suitable for your Group chats. 
 
-Can be found on telegram as [Noha](https://t.me/Noha2_bot).
+Can be found on telegram as [Rajni](https://t.me/RajnikantRobot).
 
-The Support group can be reached out to at [One Punch Support](https://t.me/OnePunchSupport), where you can ask for help about [SUPPORT](https://t.me/noha_bot_support), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [One Punch Support](https://t.me/OnePunchSupport), where you can ask for help about [SUPPORT](https://t.me/YashBebe_SupportChat), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 News channel as at [One Punch Updates](https://t.me/OnePunchUpdates) 
 
@@ -23,7 +23,7 @@ News channel as at [One Punch Updates](https://t.me/OnePunchUpdates)
 ```
 Fill in all the details, Deploy!
 Now go to https://dashboard.heroku.com/apps/(app-name)/resources ( Replace (app-name) with your app name )
-REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
+REMEMBER: Turn on worker dyno (Don't worry It's free XD) & Webhook
 Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
 ```
 
@@ -129,7 +129,7 @@ If `NO_LOAD` is not present or is an empty list, all modules selected for loadin
 
 If a module is in both `LOAD` and `NO_LOAD`, the module will not be loaded - `NO_LOAD` takes priority.
 
-   ### Creating your own modules.
+   ### Creating your own Modules.
 
 Creating a module has been simplified as much as possible - but do not hesitate to suggest further simplification.
 
