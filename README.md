@@ -1,5 +1,5 @@
 ![RaJni](https://telegra.ph/file/d103a97c1df5ac087c88f.jpg)
-# NoHa
+# RajniKant
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed personal to make Saitama suitable for your Group chats. 
 
