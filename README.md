@@ -5,9 +5,9 @@ A modular Telegram Python bot running on python3 with a sqlalchemy database and 
 
 Can be found on telegram as [Rajni](https://t.me/RajnikantRobot).
 
-The Support group can be reached out to at [One Punch Support](https://t.me/OnePunchSupport), where you can ask for help about [SUPPORT](https://t.me/YashBebe_SupportChat), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [One Punch Support](https://t.me/YashBebe_SupportChat), where you can ask for help about [SUPPORT](https://t.me/YashBebe_SupportChat), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-News channel as at [One Punch Updates](https://t.me/OnePunchUpdates) 
+News channel as at [One Punch Updates](https://t.me/YashBebe_Updates) 
 
 ## How to setup/deploy.
 
