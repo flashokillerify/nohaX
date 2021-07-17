@@ -22,7 +22,7 @@ from pyrogram.types import (
 )
 from search_engine_parser import GoogleSearch
 from tswift import Song
-from youtube-search-python import VideosSearch
+from youtubesearchpython import VideosSearch
 
 from SaitamaRobot.noha.config import get_str_key
 from SaitamaRobot.noha.functions.inlinehelper import *
