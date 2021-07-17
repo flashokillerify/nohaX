@@ -78,3 +78,5 @@ python-dotenv
 humanize
 git+https://github.com/python-telegram-bot/ptbcontrib.git
 tswift
+youtube-search-python
+
