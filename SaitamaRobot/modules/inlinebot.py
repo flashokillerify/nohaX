@@ -25,7 +25,7 @@ from tswift import Song
 from youtubesearchpython import VideosSearch
 
 from SaitamaRobot.noha.config import get_str_key
-from SaitamaRobot.noha.functions.inlinehelper import *
+from SaitamaRobot.functions.inlinehelper import *
 from SaitamaRobot.functions.pluginhelpers import fetch, json_prettify
 from  SaitamaRobot import pgram as app
 
