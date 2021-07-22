@@ -23,7 +23,7 @@ from SaitamaRobot import BOT_USERNAME, OWNER_ID
 from SaitamaRobot.cutiepii.config import get_str_key
 from SaitamaRobot.functions.pluginhelpers import convert_seconds_to_minutes as time_convert
 from SaitamaRobot.functions.pluginhelpers import fetch
-from SaitamaRobot import arq, pgram as pgram
+from SaitamaRobot import arq, pgram
 
 SUDOERS = OWNER_ID
 
