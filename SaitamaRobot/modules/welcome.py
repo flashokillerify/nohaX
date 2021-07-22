@@ -156,7 +156,6 @@ def send(update, message, keyboard, backup_message):
             LOGGER.exception()
     return msg
 
-@run_async
 @loggable
 def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
     bot, job_queue = context.bot, context.job_queue
