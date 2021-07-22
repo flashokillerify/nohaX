@@ -600,4 +600,5 @@ def main():
 if __name__ == '__main__':
     LOGGER.info("RUKO" + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
+    pgram.start()
     main()
