@@ -26,7 +26,7 @@ from tswift import Song
 from youtubesearchpython import VideosSearch
 
 from SaitamaRobot.functions.inlinehelper import *
-from SaitamaRobot.utils.pluginhelpers import fetch, json_prettify
+from SaitamaRobot.functions.pluginhelpers import fetch, json_prettify
 from SaitamaRobot import pgram as app, OPENWEATHERMAP_ID, TIME_API_KEY
 
 dictionary = PyDictionary()
