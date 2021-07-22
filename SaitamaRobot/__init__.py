@@ -7,6 +7,8 @@ import spamwatch
 from pyrogram import Client
 import telegram.ext as tg
 from telethon import TelegramClient
+from aiohttp import ClientSession
+from Python_ARQ import ARQ
 
 StartTime = time.time()
 
@@ -81,6 +83,8 @@ if ENV:
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER',
                                  'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    ARQ_API_URL =  "https://thearq.tech"
+    ARQ_API_KEY = "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ"
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
     TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
@@ -178,6 +182,8 @@ else:
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
 pgram = Client("CUTIEPIIPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+aiohttpsession = ClientSession()
+arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
