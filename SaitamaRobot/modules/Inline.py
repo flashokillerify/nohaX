@@ -100,7 +100,7 @@ __HELP__ = """
  ==>> **INLINE BOT SERVICE OF @NOHA2_BOT** <<==
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
    >> Syntax <<
-@Noha2_bot [command] [query]
+@Cutiepii_Robot [command] [query]
    >> Commands Available <<
 - **alive** - __Check Bot's Stats.__
 - **yt [query]** - __Youtube Search.__
