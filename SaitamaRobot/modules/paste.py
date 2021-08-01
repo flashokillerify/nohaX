@@ -33,10 +33,39 @@ def paste(update: Update, context: CallbackContext):
         reply_text,
         parse_mode=ParseMode.MARKDOWN,
         disable_web_page_preview=True)
+@run_async
+def hastebin(update: Update, context: CallbackContext):
+    bot = context.bot
+    args = context.args
+    msg = update.effective_message  
+    
+    if msg.reply_to_message:        
+        mean = msg.reply_to_message.text
+               
+    elif len(args) >= 1:
+        mean = msg.text.split(None, 1)[1]
+   
+    else:
+    	msg.reply_text("reply to any message or just do /paste <what you want to paste>")  
+    	return
+                                                                              
+    url = "https://hastebin.com/documents"
+    key = (
+        requests.post(url, data=mean.encode("UTF-8"))
+        .json()       
+        .get('key')
+    )
+    pasted = f"Pasted to HasteBin: https://hastebin.com/{key}"
+    msg.reply_text(pasted, disable_web_page_preview=True)
+    
+    
+    
 
+NEKO_BIN_HANDLER = DisableAbleCommandHandler("npaste", paste, run_async=True)
+HASTE_BIN_HANDLER = DisableAbleCommandHandler("paste", hastebin, run_async=True)
 
-PASTE_HANDLER = DisableAbleCommandHandler("paste", paste)
-dispatcher.add_handler(PASTE_HANDLER)
+dispatcher.add_handler(NEKO_BIN_HANDLER)
+dispatcher.add_handler(HASTE_BIN_HANDLER)
 
-__command_list__ = ["paste"]
-__handlers__ = [PASTE_HANDLER]
+__command_list__ = ["npaste", "hpaste"]
+__handlers__ = [HASTE_BIN_HANDLER]
