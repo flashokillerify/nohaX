@@ -1,9 +1,12 @@
+import httpx
 import requests
-from SaitamaRobot import dispatcher
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
+from SaitamaRobot import pgram, http, dispatcher
+from SaitamaRobot import dispatcher
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 
 @run_async
 def paste(update: Update, context: CallbackContext):
@@ -11,28 +14,31 @@ def paste(update: Update, context: CallbackContext):
     message = update.effective_message
 
     if message.reply_to_message:
-        data = message.reply_to_message.text
-
+        pasting = message.reply_to_message.text    
+    
     elif len(args) >= 1:
-        data = message.text.split(None, 1)[1]
+        pasting = message.text.split(None, 1)[1]
 
     else:
         message.reply_text("What am I supposed to do with this?")
         return
+   
+    TIMEOUT = 3
+    key = (
+        requests.post("https://nekobin.com/", data=pasting, timeout=TIMEOUT)
+        .json()
+        .get("result")
+        .get("key")
+    )
 
-    key = requests.post(
-        'https://nekobin.com/api/documents', json={
-            "content": data
-        }).json().get('result').get('key')
+    url = f"https://nekobin.com/{key}"
 
-    url = f'https://nekobin.com/{key}'
-
-    reply_text = f'Nekofied to *Nekobin* : {url}'
+    reply_text = f"Pasted to *Nekobin* : {url}"
 
     message.reply_text(
-        reply_text,
-        parse_mode=ParseMode.MARKDOWN,
-        disable_web_page_preview=True)
+        reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True,
+    )
+
 @run_async
 def hastebin(update: Update, context: CallbackContext):
     bot = context.bot
