@@ -1,4 +1,4 @@
-![NohA](https://telegra.ph//file/fa99522543de9072b0a70.jpg)
+![NohA](https://static2.aniimg.com/upload/20170515/414/c/d/7/cd7EEF.jpg)
 # NoHa
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Saitama suitable for Anime and Manga group chats. 
