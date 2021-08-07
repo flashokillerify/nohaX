@@ -69,7 +69,7 @@ the things I can help you with.
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-
+[B
 
 {}
 And the following:
@@ -209,13 +209,13 @@ def start(update: Update, context: CallbackContext):
                              text="🚑 Support Group",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
-                             text="🔔 owner ",
-                             url="https://t.me/flashokiller_gacha")
+                             text="🔔 updates ",
+                             url="https://t.me/noha_updates")
                      ],
                      [
                          InlineKeyboardButton(
                              text="🧾 Getting started guide",
-                             url="https://t.me/OnePunchUpdates/29")
+                             url="www.google.com")
                      ],
                      [
                          InlineKeyboardButton(
