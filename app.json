@@ -16,6 +16,12 @@
          },
          "plan": "heroku-postgresql"
       }
+      {
+         "options": {
+            "version": "latest"
+         },
+         "plan": "heroku-redis"
+      }
    ],
    "env": {
       "TOKEN": {
