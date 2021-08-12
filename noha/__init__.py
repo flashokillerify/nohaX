@@ -95,12 +95,7 @@ if ENV:
     SPAMWATCH_API = os.environ.get('SPAMWATCH_API', None)
     OPENWEATHERMAP_ID = os.environ.get('OPENWEATHERMAP_ID', None)
     BOT_USERNAME = "@nohaxbot"
-    MONGODB_URI = os.environ.get('MONGODB_URI', None)
-    MONGO_DB = "Astra",
-    MONGO_PORT = os.environ.get('MONGO_PORT', None)
-    REDIS_URI = os.environ.get('REDIS_URI', None)
-    REDIS_PORT = os.environ.get('REDIS_PORT', None)
-    REDIS_PASS = os.environ.get('REDIS_PASS', None)
+
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
     except ValueError:
