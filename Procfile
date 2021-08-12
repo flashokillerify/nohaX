@@ -1,3 +1,3 @@
-worker: python3 -m SaitamaRobot
-web: python3 -m SaitamaRobot
+worker: python3 -m noha
+web: python3 -m noha
 ps:scale worker=1
