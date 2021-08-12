@@ -1,4 +1,4 @@
-2import re
+import re
 import random
 from html import escape
 
