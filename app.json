@@ -1,14 +1,14 @@
 {
-      "name": "SaitamaRobot",
+      "name": "noha",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "Saitama"
+         "Mewo"
       ],   
-   "repository": "https://github.com/AnimeKaizoku/SaitamaRobot",
+   "repository": "https://github.com/flashokiller/NohA",
    "addons": [
       {
          "options": {
