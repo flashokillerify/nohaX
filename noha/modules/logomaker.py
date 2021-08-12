@@ -1,6 +1,6 @@
-from SaitamaRobot.event import register
-from SaitamaRobot import OWNER_ID
-from SaitamaRobot import telethn as tbot
+from noha.event import register
+from noha import OWNER_ID
+from noha import telethn as tbot
 import os 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -18,13 +18,13 @@ async def lego(event):
  await event.reply('meow mewo! Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./SaitamaRobot/resources/blackbg.jpg')
+    img = Image.open('./noha/resources/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "gold"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./SaitamaRobot/resources/Chopsic.otf", 330)
+    font = ImageFont.truetype("./noha/resources/Chopsic.otf", 330)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
@@ -56,13 +56,13 @@ async def lego(event):
  await event.reply('meow ! Creating your logo...wait!')
  try:
     text = event.pattern_match.group(1)
-    img = Image.open('./SaitamaRobot/resources/blackbg.jpg')
+    img = Image.open('./noha/resources/blackbg.jpg')
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
     fillcolor = "white"
     shadowcolor = "blue"
-    font = ImageFont.truetype("./SaitamaRobot/resources/Maghrib.ttf", 1000)
+    font = ImageFont.truetype("./noha/resources/Maghrib.ttf", 1000)
     w, h = draw.textsize(text, font=font)
     h += int(h*0.21)
     image_width, image_height = img.size
