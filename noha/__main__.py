@@ -18,7 +18,8 @@ from noha import (
     dispatcher,
     StartTime,
     telethn,
-    updater)
+    updater,
+    pgram)
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
