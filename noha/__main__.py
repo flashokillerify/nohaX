@@ -239,7 +239,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(
                                 text="🧾 Getting Started",
-                                url='www.google.com",
+                                url="www.google.com",
                             ),
                             InlineKeyboardButton(
                                 text="🗄 Source code",
