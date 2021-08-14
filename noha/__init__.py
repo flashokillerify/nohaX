@@ -4,19 +4,11 @@ import sys
 import time
 import spamwatch
 
-from pyrogram import Client, errors
+from pyrogram import Client
 import telegram.ext as tg
 from telethon import TelegramClient
-from telethon.sessions import StringSession
-from motor import motor_asyncio
-from odmantic import AIOEngine
-from pymongo import MongoClient
-from pymongo.errors import ServerSelectionTimeoutError
-from Python_ARQ import ARQ
 from aiohttp import ClientSession
-from ptbcontrib.postgres_persistence import PostgresPersistence
-from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
-from telegram import Chat
+from Python_ARQ import ARQ
 
 StartTime = time.time()
 
@@ -74,49 +66,41 @@ if ENV:
         raise Exception(
             "Your tiger users list does not contain valid integers.")
 
-    INFOPIC = bool(os.environ.get("INFOPIC", False)) # Info Pic (use True[Value] If You Want To Show In /info.)
-    EVENT_LOGS = os.environ.get("EVENT_LOGS", None) # G-Ban Logs (Channel) (-100)
-    ERROR_LOGS = os.environ.get("ERROR_LOGS", None) # Error Logs (Channel Ya Group Choice Is Yours) (-100)
-    WEBHOOK = bool(os.environ.get("WEBHOOK", False))
-    URL = os.environ.get("URL", "")  # If You Deploy On Heraku. [URL PERTEN:- https://{App Name}.herokuapp.com/ || EXP:- https://yuki-cutiepii-robot.herokuapp.com/]
-    PORT = int(os.environ.get("PORT", 5000)) 
+    INFOPIC = bool(os.environ.get('INFOPIC', False))
+    EVENT_LOGS = os.environ.get('EVENT_LOGS', None)
+    WEBHOOK = bool(os.environ.get('WEBHOOK', False))
+    URL = os.environ.get('URL', "")  # Does not contain token
+    PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
-    API_ID = os.environ.get("API_ID", None) # Bot Owner's API_ID (From:- https://my.telegram.org/auth)
-    API_HASH = os.environ.get("API_HASH", None) # Bot Owner's API_HASH (From:- https://my.telegram.org/auth)
-    DB_URL = os.environ.get("DATABASE_URL") # Any SQL Database Link (RECOMMENDED:- PostgreSQL & https://www.elephantsql.com)
-    DONATION_LINK = os.environ.get("DONATION_LINK") # Donation Link (ANY)
-    LOAD = os.environ.get("LOAD", "").split() # Don't Change
-    NO_LOAD = os.environ.get("NO_LOAD", "translation").split() # Don't Change
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False)) # Don't Change
-    STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False)) # Use `True` Value
-    WORKERS = int(os.environ.get("WORKERS", 8)) # Don't Change
-    BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg") # Don't Change
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False) # Don't Change
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./") # Don't Change
-    CASH_API_KEY = os.environ.get("CASH_API_KEY", None) # From:- https://www.alphavantage.co/support/#api-key
-    TIME_API_KEY = os.environ.get("TIME_API_KEY", None) # From:- https://timezonedb.com/api
-    WALL_API = os.environ.get("WALL_API", None) # From:- https://wall.alphacoders.com/api.php
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None) # From:- https://www.remove.bg/
-    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", "") # From:- https://openweathermap.org/api
-    GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None) # From:- http://genius.com/api-clients
-    MONGO_DB_URL = os.environ.get("MONGO_DB_URL", None) # MongoDB URL (From:- https://www.mongodb.com/)
-    MONGO_PORT = int(os.environ.get("MONGO_PORT", None)) # MongoDB Port (RECOMMENDED PORT:- 27017)
-    MONGO_DB = os.environ.get("MONGO_DB", None) # Any Type Of Name (EXP:- cutiepii)
-    BOT_TOKEN = int(os.environ.get("BOT_TOKEN", None)) # Telegram Bot ID (EXP:- 1241223850)
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None) # Support Chat Group Link (Use @Black_Knights_Union_Support || Dont Use https://t.me/Black_Knights_Union_Support)
-    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None) # Use @SpamWatchSupport
-    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None) # From https://t.me/SpamWatchBot 
-    ARQ_API_URL = "https://thearq.tech" # Don't Change
-    ARQ_API_KEY = "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ" # From https://t.me/ARQRobot
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "") # Bot Username
-    STRING_SESSION = os.environ.get("STRING_SESSION", None) # Telethon Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]
-    APP_ID = os.environ.get("APP_ID", None) # 2nd ID 
-    APP_HASH = os.environ.get("APP_HASH", None) # 2nd ID
-    HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", True) # Heroku App Name 
-    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", True) # Heroku API [From https://dashboard.heroku.com/account]
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True) # Don't Change
-
-
+    API_ID = os.environ.get('API_ID', None)
+    API_HASH = os.environ.get('API_HASH', None)
+    DB_URI = os.environ.get('DATABASE_URL')
+    DONATION_LINK = os.environ.get('DONATION_LINK')
+    LOAD = os.environ.get("LOAD", "").split()
+    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
+    DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
+    STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
+    WORKERS = int(os.environ.get('WORKERS', 8))
+    BAN_STICKER = os.environ.get('BAN_STICKER',
+                                 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    ARQ_API_URL =  "https://thearq.tech"
+    ARQ_API_KEY = "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ"
+    ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
+    CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
+    TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
+    AI_API_KEY = os.environ.get('AI_API_KEY', None)
+    WALL_API = os.environ.get('WALL_API', None)
+    SUPPORT_CHAT = os.environ.get('SUPPORT_CHAT', None)
+    SPAMWATCH_SUPPORT_CHAT = os.environ.get('SPAMWATCH_SUPPORT_CHAT', None)
+    SPAMWATCH_API = os.environ.get('SPAMWATCH_API', None)
+    OPENWEATHERMAP_ID = os.environ.get('OPENWEATHERMAP_ID', None)
+    BOT_USERNAME = "@nohaxbot"
+    MONGODB_URI = os.environ.get('MONGODB_URI', None)
+    MONGO_DB = "Astra",
+    MONGO_PORT = os.environ.get('MONGO_PORT', None)
+    REDIS_URI = os.environ.get('REDIS_URI', None)
+    REDIS_PORT = os.environ.get('REDIS_PORT', None)
+    REDIS_PASS = os.environ.get('REDIS_PASS', None)
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
     except ValueError:
@@ -124,7 +108,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from noha.config import Development as Config
+    from SaitamaRobot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -208,7 +192,7 @@ aiohttpsession = ClientSession()
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 dispatcher = updater.dispatcher
 
-apps=[pgram]
+app =[pgram]
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
@@ -216,7 +200,9 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from noha.modules.helper_funcs.handlers import (CustomCommandHandler, CustomMessageHandler, CustomRegexHandler)
+from noha.modules.helper_funcs.handlers import (CustomCommandHandler,
+                                                        CustomMessageHandler,
+                                                        CustomRegexHandler)
 
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
