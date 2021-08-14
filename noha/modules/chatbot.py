@@ -24,13 +24,13 @@ import noha.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
-from Cutiepii_Robot import dispatcher, updater, SUPPORT_CHAT
-from Cutiepii_Robot.modules.log_channel import gloggable
+from noha import dispatcher, updater, SUPPORT_CHAT
+from noha.modules.log_channel import gloggable
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext, MessageHandler, Filters
-from Cutiepii_Robot.modules.helper_funcs.filters import CustomFilters
-from Cutiepii_Robot.modules.helper_funcs.chat_status import user_admin
+from noha.modules.helper_funcs.filters import CustomFilters
+from noha.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
 @user_admin
