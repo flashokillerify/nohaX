@@ -5,6 +5,7 @@ import time
 import spamwatch
 
 from pyrogram import Client, errors
+import telegram.ext as tg
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 from motor import motor_asyncio
