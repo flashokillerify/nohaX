@@ -99,7 +99,7 @@ And the following:
 )
 
 SAITAMA_IMG = "https://telegra.ph/file/d24788d6073dcb112de6a.jpg"
-
+NOHA_IMG = "https://telegra.ph/file/d8b55d150c6fbf11aa8b3.png"
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project via [Paypal](ko-fi.com/sawada) or by contacting @Sawada \
  Supporting isnt always financial! \
@@ -257,7 +257,8 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<bruh:</b> <code>{}</code>".format(
+            NOHA_IMG,
+            "I'm awake already!".format(
                 uptime,
             ),
             parse_mode=ParseMode.HTML,
@@ -634,7 +635,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now online!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I am now uwu!")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
