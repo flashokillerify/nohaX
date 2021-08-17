@@ -77,6 +77,10 @@ I am an Anime themed group management bot.
 Built by weebs for weebs, I specialize in managing anime eccentric communities!
 """
 
+START_NOHA_TEXT """
+hi i am alive
+"""
+
 HELP_STRINGS = """
 Hey there! My name is *{}*.
 I'm a Hero For Fun and help admins manage their groups with One Punch! Have a look at the following for an idea of some of \
@@ -243,7 +247,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="🗄 Source code",
-                                url="https://github.com/AnimeKaizoku/SaitamaRobot",
+                                url="https://github.com/flashokiller/nohaX",
                             ),
                         ],
                         [
@@ -256,7 +260,7 @@ def start(update: Update, context: CallbackContext):
                 ),
             )
     else:
-        update.effective_message.reply_text(
+        update.effective_message.reply_photo(
             NOHA_IMG,
             "I'm awake already!".format(
                 uptime,
