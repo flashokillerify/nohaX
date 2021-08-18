@@ -18,6 +18,7 @@ Pillow>=4.2.0
 CurrencyConverter
 cloudscraper
 jikanpy
+countryinfo
 speedtest-cli
 coffeehouse
 regex
