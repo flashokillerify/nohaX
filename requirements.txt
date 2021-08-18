@@ -80,4 +80,5 @@ httpx[http2]
 spamwatch
 pynewtonmath
 PyYAML>5.0
-
+faker
+PyDictionary
